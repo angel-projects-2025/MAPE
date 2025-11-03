@@ -1,0 +1,1924 @@
+/* General */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Header general */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #FCECDD; /* marfil */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Barra superior */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 30px;
+  font-size: 14px;
+  background-color: #FCECDD;
+  color: #333;
+}
+
+.top-bar .social a {
+  color: #333;
+  margin: 0 8px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.top-bar .social a:hover {
+  color: #0077b6; /* azul moderno */
+}
+
+.top-bar .contacto {
+  font-weight: 600;
+}
+
+.top-bar .contacto i {
+  color: #25D366; /* verde WhatsApp */
+  margin-right: 5px;
+}
+
+/* Barra principal */
+.main-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+}
+
+.main-bar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-bar nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.main-bar nav ul li a:hover {
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+/* Logo */
+.logo img {
+  height: 70px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+.main-bar {
+  min-height: 110px; /* Ajusta el número según el largo que quieras */
+}
+
+.logo img {
+  height: 125px;   /* tamaño del logo */
+  margin-top: -40px; /* lo sube, aumenta el número si quieres más */
+   margin-left: -100px
+}
+
+.main-bar nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 75px; /* mueve las letras más abajo */
+}
+
+.main-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px; /* reduce el espacio entre logo y menús */
+}
+
+.main-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-bar nav:first-child {
+  flex: 0 0 auto;   /* fija el ancho, no empuja al logo */
+  margin-right: 80px; /* ajusta solo la distancia hacia el logo */
+}
+
+.logo {
+  flex: 0 0 auto;   /* el logo queda fijo */
+}
+
+.carrusel {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.texto-slide {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+.texto-slide h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.texto-slide p {
+  font-size: 1.5rem;
+  margin: 5px 0 0 0;
+}
+
+/* Botones */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.prev:hover, .next:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.carrusel {
+  height: 80vh; /* ocupa toda la altura visible de la ventana */
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoom 20s linear infinite alternate;
+}
+
+@keyframes zoom {
+  from { transform: scale(1); }
+  to   { transform: scale(1.2); }
+}
+
+.cartas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+  gap: 0; /* sin espacios entre ellas */
+  width: 100%;
+}
+
+.carta {
+  position: relative;
+  width: 100%;
+  height: 300px; /* alto alargado */
+  overflow: hidden;
+}
+
+.carta img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* la imagen ocupa toda la carta */
+  transition: transform 0.5s ease;
+}
+
+.carta:hover img {
+  transform: scale(1.1); /* zoom al pasar el mouse */
+}
+
+.carta button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carta button:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.carta {
+  height: 800px; /* más largo */
+}
+
+.carrusel-cartas {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 40px 0;
+}
+
+.contenedor-cartas {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carta {
+  flex: 0 0 25%; /* 4 cartas visibles al mismo tiempo */
+  position: relative;
+  height: 400px; /* ajusta el largo */
+  margin: 0;
+}
+
+.carta img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carta button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.prev-carta, .next-carta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 2rem;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev-carta { left: 10px; }
+.next-carta { right: 10px; }
+
+.prev-carta:hover, .next-carta:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+/* Elimina márgenes y padding por defecto */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Asegura que la sección del carrusel de cartas no tenga espacio extra */
+.carrusel-cartas {
+  margin: 0;
+  padding: 0;
+}
+
+.carta {
+  height: 700px; /* nuevo largo de las cartas */
+}
+
+.nuestros-planes {
+  width: 100%;
+  padding: 50px 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.planes-contenedor {
+  display: flex;
+  gap: 30px; /* espacio entre lado izquierdo y derecho */
+  width: 100%;
+}
+
+/* Lado izquierdo */
+.lado-izquierdo {
+  flex: 1;
+}
+
+.lado-izquierdo h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.lado-izquierdo p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.carta-grande {
+  width: 100%;
+  height: 400px; /* ajusta el alto de la carta grande */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carta-grande img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Lado derecho */
+.lado-derecho {
+  flex: 1;
+  display: flex;         /* cartas una al lado de la otra */
+  gap: 20px;
+}
+
+.carta-pequena {
+  flex: 1;               /* cada carta ocupa la mitad del lado derecho */
+  background: #f5f5f5;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carta-pequena img {
+  width: 100%;
+  height: 200px;         /* alto de las cartas pequeñas */
+  object-fit: cover;
+}
+
+.descripcion-carta {
+  padding: 15px;
+}
+
+.descripcion-carta h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.3rem;
+}
+
+.descripcion-carta p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.carta-grande {
+  width: 70%;  /* cambia 100% a 70% */
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.planes-contenedor {
+  display: flex;
+  gap: 30px;       /* espacio entre lado izquierdo y derecho */
+  width: 100%;
+  max-width: 1200px; /* opcional: limita el ancho máximo */
+  margin: 0 auto;     /* centra todo el contenedor */
+}
+
+/* Lado derecho */
+.lado-derecho {
+  flex: 1;
+  display: flex;   /* cartas una al lado de la otra */
+  gap: 20px;       /* espacio entre cartas */
+  justify-content: flex-start; /* mueve las cartas hacia la izquierda */
+}
+
+.carta-pequena {
+  flex: 1;
+  max-width: 100%; /* evita que sobresalgan */
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* evita scroll horizontal */
+}
+
+.planes-contenedor {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: 250px; /* mueve todo más a la izquierda */
+}
+
+.fondo-dos-mitades {
+  display: flex;
+  width: 100%;
+  height: 400px; /* altura de la sección */
+  overflow: hidden;
+}
+
+.mitad {
+  flex: 1;
+  position: relative;
+}
+
+.mitad img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mitad.derecha .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7); /* oscurece la imagen */
+}
+
+.contenido-texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* centra el contenido */
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.contenido-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contenido-texto p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.contenido-texto button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #ff9800;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* General */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Sección contacto */
+.contacto-seccion {
+  width: 100%;
+  padding: 50px 0;
+  background-color: #f5f5f5; /* opcional */
+}
+
+/* Contenedor principal */
+.contacto-contenedor {
+  display: flex;
+  width: 100%;
+  gap: 0; /* eliminamos espacios entre lados */
+  flex-wrap: wrap; /* para que sea responsive en pantallas pequeñas */
+}
+
+/* Lado izquierdo: formulario */
+.lado-izquierdo {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente */
+  padding: 40px;
+  background-color: #fff; /* opcional, para contraste */
+}
+
+.lado-izquierdo h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.lado-izquierdo p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Formulario */
+.formulario-cotizacion input[type="text"],
+.formulario-cotizacion input[type="email"],
+.formulario-cotizacion input[type="tel"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.check input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.formulario-cotizacion button {
+  padding: 12px 20px;
+  background-color: #ff9800;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+/* Lado derecho: contenedor */
+.lado-derecho {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+}
+
+/* Imagen específica que ocupa todo el lado derecho */
+.imagen-completa {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ocupa todo el contenedor sin deformarse */
+  display: block;    /* elimina espacios por defecto */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contacto-seccion {
+  width: 100%;
+  padding: 0;       /* elimina padding superior e inferior */
+  margin: 0;        /* elimina margen */
+  height: 100vh;    /* opcional: ocupa toda la altura de la pantalla */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%; /* asegura que la altura ocupe toda la pantalla */
+}
+
+.contacto-seccion {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contacto-contenedor {
+  display: flex;
+  width: 100%;
+  gap: 0;
+}
+
+.lado-izquierdo, .lado-derecho {
+  flex: 1;
+  min-width: 300px;
+  height: 100%; /* asegura que ambos lados tengan la misma altura */
+}
+
+.lado-izquierdo {
+  padding: 40px; /* solo para formulario */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lado-derecho {
+  position: relative;
+}
+
+.imagen-completa {
+  width: 100%;
+  height: 100%;      /* ocupa todo el contenedor */
+  object-fit: cover; /* cubre todo sin deformarse */
+  display: block;
+}
+
+.footer {
+  width: 100%;
+  background-color: #4a4a4a; /* color plomo oscuro */
+  padding: 30px 5%;
+  box-sizing: border-box;
+}
+
+.footer-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Lado izquierdo: ubicación */
+.footer-izquierdo {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-izquierdo p {
+  color: white;
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+/* Centro: correo */
+.footer-centro {
+  flex: 1;
+  text-align: center;
+  min-width: 200px;
+}
+
+.footer-centro p {
+  color: white;
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+/* Lado derecho: teléfono */
+.footer-derecho {
+  flex: 1;
+  text-align: right;
+  min-width: 200px;
+}
+
+.footer-derecho p {
+  color: white;
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.contacto-seccion {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* para que el contenedor se ajuste al contenido */
+}
+
+.contacto-contenedor {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.lado-izquierdo, .lado-derecho {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Lado izquierdo: formulario */
+.lado-izquierdo {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Lado derecho: imagen */
+.lado-derecho {
+  flex: 1;
+  position: relative;
+  height: auto; /* altura automática */
+}
+
+.imagen-completa {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cubre todo sin deformarse */
+  display: block;
+}
+
+/* Para asegurar que lado derecho siempre tenga al menos la altura del contenido izquierdo */
+.contacto-contenedor {
+  align-items: stretch; /* fuerza que ambos lados tengan la misma altura */
+}
+
+/* Elimina espacios arriba y abajo de la sección contacto */
+.contacto-seccion {
+  width: 100%;
+  margin: 0;
+  padding: 0; /* elimina padding superior e inferior */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenedor de la sección contacto */
+.contacto-contenedor {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: stretch; /* asegura que ambos lados tengan la misma altura */
+  gap: 0; /* elimina cualquier espacio entre los lados */
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  margin: 0;       /* elimina margen */
+  padding: 30px 5%; /* solo padding interno del contenido */
+  background-color: #4a4a4a;
+  box-sizing: border-box;
+}
+
+/* Reinicio general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Sección contacto */
+.contacto-seccion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Contenedor de la sección contacto */
+.contacto-contenedor {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: stretch; /* igual altura */
+  gap: 0;
+}
+
+/* Lado izquierdo */
+.lado-izquierdo {
+  flex: 1;
+  min-width: 300px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Lado derecho */
+.lado-derecho {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+}
+
+/* Imagen derecha que ocupa todo */
+.imagen-completa {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  background-color: #4a4a4a;
+  padding: 30px 5%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Reinicio global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body y HTML */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* Sección contacto */
+.contacto-seccion {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor de contacto */
+.contacto-contenedor {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: stretch; /* hace que los lados tengan misma altura */
+}
+
+/* Lado izquierdo: formulario */
+.lado-izquierdo {
+  flex: 1;
+  min-width: 300px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Lado derecho: imagen */
+.lado-derecho {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+  display: flex;
+}
+
+.imagen-completa {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  background-color: #4a4a4a;
+  color: white;
+  padding: 30px 5%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Footer contenedor */
+.footer-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-izquierdo, .footer-centro, .footer-derecho {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-centro {
+  text-align: center;
+}
+
+.footer-derecho {
+  text-align: right;
+}
+
+/* Reinicio general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* evita scroll horizontal */
+}
+
+/* Sección contacto */
+.contacto-seccion {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch; /* fuerza que los lados tengan la misma altura */
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor de contacto */
+.contacto-contenedor {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: stretch; /* asegura igual altura */
+}
+
+/* Lado izquierdo: formulario */
+.lado-izquierdo {
+  flex: 1;
+  min-width: 300px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff; /* opcional */
+}
+
+/* Lado derecho: imagen */
+.lado-derecho {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+  display: flex;
+}
+
+/* Imagen derecha específica */
+.imagen-completa {
+  width: 100%;
+  height: 100%;      /* ocupa todo el contenedor */
+  object-fit: cover; /* cubre todo sin deformarse */
+  display: block;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  background-color: #4a4a4a;
+  color: white;
+  padding: 30px 5%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.footer-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-izquierdo, .footer-centro, .footer-derecho {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-centro {
+  text-align: center;
+}
+
+.footer-derecho {
+  text-align: right;
+}
+
+.footer-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap; /* ahora no se rompe la fila */
+  gap: 20px;
+}
+
+.footer-izquierdo, .footer-centro, .footer-derecho {
+  flex: 1;         /* cada bloque ocupa la misma proporción */
+  min-width: 200px; 
+}
+
+.footer-centro {
+  text-align: center;
+}
+
+.footer-derecho {
+  text-align: right;
+}
+
+.descripcion-carta {
+  padding: 15px;
+  text-align: center; /* centra el texto */
+}
+
+.descripcion-carta h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.3rem;
+}
+
+.descripcion-carta p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Lado derecho: cartas pequeñas */
+.lado-derecho {
+  display: flex;
+  gap: 20px;          /* espacio entre las cartas */
+  justify-content: flex-start;
+}
+
+.carta-pequena {
+  flex: 0 0 48%;      /* cada carta ocupa casi la mitad del lado derecho */
+  max-width: 48%;     /* asegura que no se salga del contenedor */
+  background: #f5f5f5;
+  overflow: hidden;
+  border-radius: 10px;
+  text-align: center; /* centra los textos dentro de la carta */
+}
+
+/* Contenedor de la carta grande */
+.carta-grande {
+  width: 100%;
+  height: 300px;   /* ajusta este valor para achicar o agrandar */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Imagen dentro de la carta grande */
+.carta-grande img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* mantiene proporción y recorta si es necesario */
+  display: block;
+}
+
+.descripcion-carta {
+  padding: 15px;
+  text-align: center; /* centrado del texto */
+  margin-top: 50px;   /* ajusta este valor para mover el texto más abajo */
+}
+
+.carta-pequena.individual {
+  background-color: #FCECDD;
+}
+
+.carta-pequena.corporativo {
+  background-color: rgb(10, 10, 27);
+}
+.carta-pequena.corporativo .descripcion-carta h3,
+.carta-pequena.corporativo .descripcion-carta p {
+  color: white;
+}
+
+.texto-slide {
+  position: absolute;
+  bottom: 50px; /* ajusta según la altura del carrusel */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 370px;       /* tamaño del círculo */
+  height: 370px;      /* tamaño del círculo */
+  background-color: rgba(248, 108, 15, 0.7); /* naranja con transparencia */
+  color: white;       /* color del texto */
+  border-radius: 50%; /* hace el círculo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* opcional, profundidad */
+
+/* efectos de aparición/desaparición */
+  opacity: 0;
+  transform: translateX(-50%) scale(0.8);
+  transition: all 0.8s ease-in-out;
+}
+
+/* Solo se muestra cuando el slide es activo */
+.slide.active .texto-slide {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+
+.texto-slide {
+  top: 23%; /* antes estaba 50% */
+  left: 80%; /* o el valor que ya ajustaste */
+  opacity: 0;
+  transform: translateX(-50%) scale(0.8);
+  transition: all 0.8s ease-in-out;
+}
+
+/* Solo se muestra cuando el slide es activo */
+.slide.active .texto-slide {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+.icon-social {
+  width: 57px;   /* ancho más pequeño */
+  height: auto;  /* mantiene la proporción */
+}
+
+.social {
+  margin-left: 300px; /* mueve todo el bloque hacia la derecha */
+}
+
+/* Para las imágenes de redes sociales */
+.social .icon-social {
+  position: relative;
+  top: 30px;  /* aquí controlas cuánto bajan */
+}
+
+header {
+  height: 200px; /* puedes cambiar 60px por el alto que quieras */
+}
+
+.main-bar {
+  margin-top: -20px; /* ajusta el valor, por ejemplo -10px, -30px, etc */
+}
+
+.social a:first-child {
+  margin-right: 15px; /* solo el primer icono tendrá espacio */
+}
+
+.contacto .numero {
+  font-size: 22px;       /* Tamaño grande */
+  font-weight: bold;     /* Números en negrita */
+  margin-left: 8px;      /* Espacio entre el icono y el número */
+}
+
+.contacto .codigo {
+  color: rgb(230, 101, 16);         /* Color anaranjado para +51 */
+}
+
+.contacto .resto {
+  color: black;          /* Negro para el resto del número */
+}
+
+.contacto {
+  position: relative;
+  left: -320px; /* mueve a la izquierda */
+}
+
+.contacto img {
+  position: relative;
+  top: 30px; /* ajusta el valor según lo que necesites */
+}
+
+.contacto span {
+  position: relative;
+  top: 5px; /* mueve el número hacia abajo */
+}
+
+a {
+  text-decoration: none; /* elimina la línea negra */
+}
+
+/* Estilo base del menú */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Submenú oculto */
+nav ul li .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;   /* aparece justo debajo del padre */
+  left: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  min-width: 220px; /* ancho del cuadro */
+  z-index: 1000;
+}
+
+/* Estilos de las opciones del submenu */
+nav ul li .submenu li a {
+  padding: 6px 12px;   /* menos padding = letras más juntas */
+  font-size: 14px;
+  font-weight: normal;
+  color: #333;
+  white-space: nowrap; /* evita que las palabras largas se corten */
+}
+
+nav ul li .submenu li a:hover {
+  background: #f0f0f0;
+  color: #000;
+}
+
+/* Mostrar submenú al pasar el ratón */
+nav ul li:hover > .submenu {
+  display: block;
+}
+
+nav ul li.dropdown .submenu li:first-child a {
+    margin-top: 8px; /* mueve "Rollers" hacia arriba */
+    display: block;   /* asegúrate de que sea un bloque para que funcione */
+}
+
+nav ul li.dropdown .submenu li:nth-child(2) a {
+    margin-top: 20px; /* mueve "Persianas verticales" hacia arriba */
+    display: block;   /* asegura que funcione el margen */
+}
+
+nav ul li.dropdown .submenu li:nth-child(3) a {
+    margin-top: 30px; /* ajusta según lo necesites */
+    display: block;
+}
+
+nav ul li.dropdown .submenu li:nth-child(4) a {
+    margin-top: 40px; /* ajusta según lo necesites */
+    display: block;
+}
+
+nav ul li.dropdown .submenu li:nth-child(5) a {
+    margin-top: 40px; /* ajusta según lo necesite */
+    display: block;
+}
+
+nav ul li.dropdown .submenu li:nth-child(6) a {
+    margin-top: 40px; /* Ajusta según convenga */
+    display: block;
+}
+
+nav ul li.dropdown .submenu li:nth-child(7) a {
+    margin-top: 40px; /* ajusta según necesites */
+    display: block;
+}
+
+nav ul li.dropdown .submenu li:nth-child(8) a {
+    margin-top: 40px; /* ajusta según necesites */
+    display: block;
+}
+
+/* SECCIÓN CONTACTO */
+.contacto-seccion {
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+/* Título principal: ¿EMPEZAMOS SU TRABAJO? */
+.contacto-seccion .lado-izquierdo h2 {
+  font-size: 36px;
+  color: #000; /* negro */
+  margin-bottom: 15px;
+}
+
+/* Subtítulo: Contactanos */
+.contacto-seccion .lado-izquierdo p.contactanos {
+  font-size: 30px;
+  color: #FF7F00; /* anaranjado */
+  margin-bottom: 10px;
+}
+
+/* Texto: Complete el formulario */
+.contacto-seccion .lado-izquierdo p.complete-formulario {
+  font-size: 18px;
+  color: #808080; /* plomo */
+  margin-bottom: 10px;
+}
+
+/* Texto: Cotice ahora */
+.contacto-seccion .lado-izquierdo p.cotice-ahora {
+  font-size: 24px;
+  font-weight: bold;
+  color: #808080; /* plomo */
+  margin-bottom: 20px;
+}
+
+/* Inputs del formulario */
+.contacto-seccion .formulario-cotizacion input {
+  display: block;       /* cada input en su línea */
+  width: 250px;         /* ancho más chico */
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 12px;  /* puntas circulares */
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Checkbox */
+.contacto-seccion .formulario-cotizacion .check input {
+  margin-right: 8px;
+}
+
+/* Botón enviar */
+.contacto-seccion .formulario-cotizacion button {
+  display: block;
+  padding: 12px 30px;
+  border-radius: 12px;   /* puntas circulares */
+  border: none;
+  background-color: #FF7F00;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contacto-seccion .lado-izquierdo {
+  margin-left: 80px; /* Ajusta este valor para mover más o menos */
+}
+
+/* Estilo del checkbox y texto */
+.contacto-seccion .check {
+  display: flex;           /* Coloca checkbox y texto en línea */
+  align-items: center;     /* Centra verticalmente */
+  gap: 10px;               /* Espacio entre el cuadro y el texto */
+  font-size: 14px;         /* Tamaño de letra del texto */
+  color: #555;             /* Color del texto */
+  margin-top: 10px;        /* Separación con los inputs */
+}
+
+.contacto-seccion .check input[type="checkbox"] {
+  width: 18px;             /* Tamaño del cuadro */
+  height: 18px;            /* Tamaño del cuadro */
+  border-radius: 4px;      /* Esquinas redondeadas */
+  accent-color: #FF6600;   /* Color del check marcado */
+  cursor: pointer;         /* Cambia el cursor al pasar por encima */
+}
+
+/* Inputs del formulario */
+.contacto-seccion .formulario-cotizacion input[type="text"],
+.contacto-seccion .formulario-cotizacion input[type="email"],
+.contacto-seccion .formulario-cotizacion input[type="tel"] {
+  width: 340px;         /* Más ancho */
+  height: 50px;         /* Más alto */
+  border-radius: 10px;  /* Puntas redondeadas */
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  margin-bottom: 12px;  /* Espacio entre inputs */
+  font-size: 14px;
+}
+
+/* Checkbox y texto */
+.contacto-seccion .check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.contacto-seccion .check input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  accent-color: #FF6600;
+  cursor: pointer;
+}
+
+.carrusel .slide img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease-in-out; /* transición suave */
+  will-change: transform; /* optimiza para animaciones */
+}
+
+/* Fondo 3 reducido */
+.carrusel .slide:nth-child(3) img {
+  transform: scale(0.95);
+}
+
+.carrusel .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* hace que todas se adapten igual sin deformarse */
+  transition: transform 1s ease-in-out; /* transición fluida */
+}
+
+/* --- MENÚ PRINCIPAL --- */
+.main-bar nav ul li a {
+  position: relative;
+  padding: 13px 15px;
+  text-decoration: none;
+  color: black; /* color normal */
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border-radius: 4px; /* esquinas un poquito redondeadas */
+}
+
+.main-bar nav ul li a:hover {
+  background-color: #ff6600; /* cuadrado anaranjado */
+  color: #fff; /* letras blancas */
+}
+
+/* Fuerza el estilo del cuadro submenu */
+.dropdown .submenu {
+  background-color: #fcab5b !important;   /* anaranjado claro */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Fuerza el estilo de los links dentro del submenu */
+.dropdown .submenu li a {
+  display: block;
+  color: #ffffff !important;      /* letras blancas */
+  font-size: 18px !important;     /* más grandes */
+  font-weight: bold !important;   /* más gruesas */
+  padding: 10px 14px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+/* Hover dentro del cuadro */
+.dropdown .submenu li a:hover {
+  background-color: #ff8533 !important;  /* naranja más fuerte */
+  border-radius: 3px;
+}
+
+/* Estilo de los enlaces principales del menú */
+nav ul li a {
+  color: #000000;          /* puedes cambiar si quieres otro color */
+  font-size: 17px;         /* más grandes */
+  font-weight: bold;       /* más gruesos */
+  text-decoration: none;
+  padding: 12px 18px;
+  display: block;
+  transition: color 0.3s;
+}
+
+/* Efecto hover en los enlaces principales */
+nav ul li a:hover {
+  color: #ff6600;          /* anaranjado al pasar el mouse */
+}
+
+.imagen-completa {
+  width: 500%;     /* ancho: ocupa todo el contenedor */
+  height: 860px;   /* alto: ajusta a lo que quieras */
+  object-fit: cover; /* hace que la imagen no se deforme */
+}
+
+.imagen-completa {
+  width: 100%;
+  height: 911px;
+  object-fit: cover;
+  margin-top: -50px; /* súbela 20px, ajusta el valor */
+}
+
+/* Estado inicial oculto */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+/* Estado visible */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero {
+  background: url("img/fondo\ 5.jpg") no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3); /* oscurece el fondo */
+}
+
+.hero-contenido {
+  position: relative; /* para que quede encima de la capa oscura */
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.hero {
+  height: 600px; /* puedes probar con 500px, 600px, 700px */
+}
+
+.cartas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+  gap: 20px; /* separación entre cartas */
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.carta {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.2s;
+}
+
+.carta:hover {
+  transform: scale(1.05); /* efecto al pasar el mouse */
+}
+
+.carta img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover; /* recorta la imagen sin deformarla */
+  border-radius: 8px;
+}
+
+.carta h3 {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.carta {
+  padding: 8px !important;         /* menos espacio interno */
+  height: 220px !important;        /* achica el alto total */
+}
+
+.carta {
+  width: 100%;              /* que ocupe su columna */
+  max-width: 250px;         /* ancho máximo de cada carta */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carta img {
+  max-width: 100%;
+  max-height: 150px;        /* controla la altura sin recortar */
+  object-fit: contain;      /* muestra la imagen completa */
+  border-radius: 5px;
+}
+
+.carta h3 {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.cartas {
+  margin-top: -120px; /* súbelas 40px, puedes ajustar el valor */
+}
+
+.historia {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.historia h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.historia p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* CSS para estilos2.css */
+/* "Full-bleed" para ocupar todo el ancho de la ventana */
+.dos-imagenes {
+  width: 100vw;
+  margin-left: calc(50% - 50vw); /* rompe el contenedor y se extiende hasta ambos lados */
+  display: flex;
+  gap: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* cada mitad ocupa 50% */
+.dos-imagenes .img {
+  flex: 1 1 50%;
+  overflow: hidden;
+  height: 420px; /* ajusta la altura que quieras */
+  position: relative;
+}
+
+/* image fit: se ve completa pero recortando para llenar el bloque */
+.dos-imagenes .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* usa 'contain' si quieres ver la imagen completa sin recortes */
+  display: block;
+}
+
+/* Responsive: en móviles apilan verticalmente */
+@media (max-width: 768px) {
+  .dos-imagenes {
+    width: 100%;
+    margin-left: 0;
+    flex-direction: column;
+  }
+  .dos-imagenes .img {
+    height: 260px; /* altura menor en móvil */
+  }
+}
+
+.bloque-mv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.columna {
+  display: flex;
+  flex-direction: column;
+}
+
+.columna .imagen {
+  width: 100%;
+  height: 300px;
+}
+
+.columna .imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.columna .contenido {
+  padding: 30px;
+  text-align: center;
+  color: #fff; /* el texto en blanco */
+}
+
+.columna .contenido h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.columna .contenido p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* 🎨 Colores personalizados */
+.vision {
+  background: #555; /* gris oscuro */
+}
+
+.mision {
+  background: #e67e22; /* naranja */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bloque-mv {
+    grid-template-columns: 1fr;
+  }
+  .columna .imagen {
+    height: 200px;
+  }
+}
+
+.empresa {
+  width: 100%;
+  padding: 60px 40px;
+  background: #f9f9f9; /* fondo más claro */
+  text-align: left; /* todo alineado a la izquierda */
+}
+
+.empresa h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #222;
+  font-weight: bold;
+  border-left: 6px solid #ff6600; /* barra de color para resaltar el título */
+  padding-left: 12px;
+}
+
+.empresa p {
+  max-width: 1000px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.footer {
+  background: #575757;          /* Fondo oscuro */
+  width: 100%;               /* Ocupar todo el ancho */
+  padding: 65px 0;           /* Más alto */
+}
+
+.footer-contenedor {
+  max-width: 1200px;         /* Centrado en pantallas grandes */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; /* Espacio entre cada bloque */
+  align-items: center;
+  flex-wrap: wrap;           /* Que se acomode en pantallas pequeñas */
+  gap: 30px;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* espacio entre ícono y texto */
+}
+
+.footer-item p {
+  color: #fff;       /* Texto blanco */
+  font-weight: bold; /* Letras gruesas */
+  font-size: 16px;   /* Un poquito más grande */
+  margin: 0;
+}
+
+.footer-icon {
+  width: 28px;   /* Íconos un poco más grandes */
+  height: 28px;
+}
+
+.carta,
+.carta img {
+  transform: none !important;
+  transition: none !important;
+}
+
+.carta:hover,
+.carta:hover img {
+  transform: none !important;
+}
+
+.bloque-mv {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bloque-mv .columna {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.bloque-mv .imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bloque-mv .contenido {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* --- Animaciones de aparición --- */
+.hidden {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🔹 Solo agranda las imágenes de Visión y Misión */
+#vision .imagen img,
+#mision .imagen img {
+  width: 100%;
+  height: 800px; /* 🔸 Aumenta este valor si quieres que sean más largas */
+  object-fit: cover; /* Evita que se deformen */
+  display: block;
+}
+
+.hero {
+  background-image: url('img/fondo\ 5.jpg'); /* ← reemplaza con tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* 🔹 Esta línea hace que la imagen te siga */
+  height: 60vh; /* ocupa toda la altura de la pantalla */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.btn-ver-mas {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: rgba(255, 204, 0, 0.8); /* amarillo semitransparente */
+  color: black;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-ver-mas:hover {
+  background-color: rgba(255, 204, 0, 1); /* más sólido al pasar el mouse */
+  transform: scale(1.05);
+}
+
+.hero-contenido {
+  text-align: left;
+  padding-left: -1000px; /* mueve todo hacia la izquierda */
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
