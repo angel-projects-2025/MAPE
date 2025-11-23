@@ -1676,159 +1676,73 @@ body {
   background-color: #e27a03;
 }
 
-/* ================================
-   RESPONSIVE SOLO PARA CELULAR
-   ================================ */
+/* ======== MODO CELULAR ======== */
 @media (max-width: 768px) {
 
-    /* General */
-    body {
-        overflow-x: hidden;
-    }
+  /* HEADER */
+  .top-bar, 
+  .main-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
 
-    img {
-        max-width: 100%;
-        height: auto;
-    }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    /* --------HEADER-------- */
-    header {
-        flex-direction: column;
-    }
+  .logo img {
+    width: 150px;
+  }
 
-    .top-bar {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
+  /* CARRUSEL */
+  .carrusel img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 
-    .main-bar {
-        flex-direction: column;
-        gap: 20px;
-        padding: 15px 0;
-    }
+  .texto-slide {
+    font-size: 16px;
+    left: 5%;
+    bottom: 10%;
+  }
 
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
+  /* CARTAS */
+  .contenedor-cartas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
 
-    .logo img {
-        max-width: 140px;
-    }
+  .carta img {
+    width: 100%;
+    height: auto;
+  }
 
-    .submenu {
-        position: static;
-        width: 100%;
-        text-align: center;
-    }
+  /* PLANES */
+  .planes-contenedor {
+    flex-direction: column;
+  }
 
-    /* --------CARRUSEL-------- */
-    .carrusel {
-        height: auto;
-    }
+  /* DOS MITADES */
+  .fondo-dos-mitades {
+    flex-direction: column;
+  }
 
-    .carrusel img {
-        height: auto;
-    }
+  .fondo-dos-mitades .mitad img {
+    width: 100%;
+    height: auto;
+  }
 
-    .texto-slide h2 {
-        font-size: 28px;
-    }
+  /* CONTACTO */
+  .contacto-contenedor {
+    flex-direction: column;
+    gap: 20px;
+  }
 
-    .texto-slide p {
-        font-size: 18px;
-    }
-
-    .prev, .next {
-        font-size: 25px;
-        padding: 6px;
-    }
-
-    /* CARTAS INICIO */
-    .contenedor-cartas {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
-    .carta img {
-        height: auto;
-    }
-
-    .prev-carta, .next-carta {
-        display: none;
-    }
-
-    /* --------NUESTROS PLANES-------- */
-    .planes-contenedor {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .carta-grande img {
-        width: 100%;
-        height: auto;
-    }
-
-    .lado-derecho {
-        width: 100%;
-    }
-
-    .carta-pequena {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    /* --------SECCIÓN 2 IMÁGENES-------- */
-    .fondo-dos-mitades {
-        flex-direction: column;
-    }
-
-    .mitad {
-        width: 100%;
-    }
-
-    .derecha .contenido-texto {
-        width: 90%;
-        text-align: center;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    /* --------FORMULARIO DE CONTACTO-------- */
-    .contacto-contenedor {
-        flex-direction: column;
-        padding: 15px;
-    }
-
-    .lado-izquierdo, 
-    .lado-derecho {
-        width: 100%;
-    }
-
-    .imagen-completa {
-        margin-top: 15px;
-    }
-
-    input, button {
-        font-size: 14px;
-    }
-
-    /* --------FOOTER-------- */
-    .footer-contenedor {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-
-    .footer-item p {
-        text-align: center;
-    }
-
-    .whatsapp-float img {
-        width: 50px;
-    }
+  .imagen-completa {
+    width: 100%;
+  }
 }
