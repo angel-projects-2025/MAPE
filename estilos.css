@@ -1675,3 +1675,160 @@ body {
 .btn-ver-mas:hover {
   background-color: #e27a03;
 }
+
+/* ================================
+   RESPONSIVE SOLO PARA CELULAR
+   ================================ */
+@media (max-width: 768px) {
+
+    /* General */
+    body {
+        overflow-x: hidden;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* --------HEADER-------- */
+    header {
+        flex-direction: column;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .main-bar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .logo img {
+        max-width: 140px;
+    }
+
+    .submenu {
+        position: static;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* --------CARRUSEL-------- */
+    .carrusel {
+        height: auto;
+    }
+
+    .carrusel img {
+        height: auto;
+    }
+
+    .texto-slide h2 {
+        font-size: 28px;
+    }
+
+    .texto-slide p {
+        font-size: 18px;
+    }
+
+    .prev, .next {
+        font-size: 25px;
+        padding: 6px;
+    }
+
+    /* CARTAS INICIO */
+    .contenedor-cartas {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .carta img {
+        height: auto;
+    }
+
+    .prev-carta, .next-carta {
+        display: none;
+    }
+
+    /* --------NUESTROS PLANES-------- */
+    .planes-contenedor {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .carta-grande img {
+        width: 100%;
+        height: auto;
+    }
+
+    .lado-derecho {
+        width: 100%;
+    }
+
+    .carta-pequena {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* --------SECCIÓN 2 IMÁGENES-------- */
+    .fondo-dos-mitades {
+        flex-direction: column;
+    }
+
+    .mitad {
+        width: 100%;
+    }
+
+    .derecha .contenido-texto {
+        width: 90%;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* --------FORMULARIO DE CONTACTO-------- */
+    .contacto-contenedor {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .lado-izquierdo, 
+    .lado-derecho {
+        width: 100%;
+    }
+
+    .imagen-completa {
+        margin-top: 15px;
+    }
+
+    input, button {
+        font-size: 14px;
+    }
+
+    /* --------FOOTER-------- */
+    .footer-contenedor {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-item p {
+        text-align: center;
+    }
+
+    .whatsapp-float img {
+        width: 50px;
+    }
+}
