@@ -1811,3 +1811,35 @@ body {
     right: 15px;
   }
 }
+
+/* ====== SOLO CELULAR ====== */
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .reco-contenido {
+    flex-direction: column;
+  }
+
+  .reco-texto {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .reco-imagen img {
+    width: 100%;
+    height: auto;
+  }
+}
