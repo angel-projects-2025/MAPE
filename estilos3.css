@@ -2022,3 +2022,19 @@ body {
   opacity: 1;
   transform: translateX(0);
 }
+
+.footer {
+  font-size: 20px;
+}
+
+.footer-item p {
+  font-size: 20px;
+}
+
+.footer-item:first-child {
+  margin-left: -230px;
+}
+
+.footer-item:nth-child(3) {
+  transform: translateX(40px);
+}

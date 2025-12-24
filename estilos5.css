@@ -1692,3 +1692,19 @@ body {
   accent-color: #222 !important; /* Color del check (negro elegante) */
   cursor: pointer;
 }
+
+.footer {
+  font-size: 20px;
+}
+
+.footer-item p {
+  font-size: 20px;
+}
+
+.footer-item:first-child {
+  margin-left: -230px;
+}
+
+.footer-item:nth-child(3) {
+  transform: translateX(40px);
+}

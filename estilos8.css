@@ -1676,6 +1676,322 @@ body {
   background-color: #e27a03;
 }
 
+.reco-section {
+  width: 100%;
+  padding: 0; /* para que la imagen llegue hasta arriba/abajo */
+}
+
+.reco-contenido {
+  display: flex;
+  width: 100%;
+  height: 450px; /* altura del bloque, puedes aumentar */
+}
+
+.reco-texto {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.reco-texto h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.reco-texto h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.reco-texto p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.reco-imagen {
+  flex: 1;
+  height: 100%;
+}
+
+.reco-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Hace que la imagen LLENE todo su lado */
+  display: block;
+}
+
+.reco-texto {
+  flex: 1;
+  transform: translateX(140px); /* mueve visualmente TODO hacia la derecha */
+}
+
+.reco-contenido {
+  display: flex;
+  width: 100%;
+}
+
+.reco-texto {
+  flex: 0 0 45%;     /* 45% fijo, NO cambia */
+  transform: translateX(130px);
+  position: relative;
+}
+
+.reco-imagen {
+  flex: 0 0 55%;     /* 55% fijo, NO cambia */
+}
+
+.reco-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reco-imagen img {
+  transform: translateX(80px); /* mueve la imagen a la derecha */
+}
+
+.reco-texto {
+  margin-top: 55px; /* baja el texto hacia abajo */
+}
+
+.nuestras {
+  font-weight: 400;        /* delgado */
+  color: #888888;          /* plomo */
+  letter-spacing: 2px;     /* opcional, se ve más elegante */
+}
+
+.recomendaciones {
+  font-weight: 1000;        /* grueso */
+  color: #ff7a00;          /* naranja */
+}
+
+.reco-frase {
+  color: #414040; /* plomo oscuro */
+  font-weight: 900; /* letras gruesitas */
+  letter-spacing: 0.5px; /* opcional: un poquito más elegante */
+}
+
+/* CONTENEDOR GENERAL */
+.roller-section {
+  width: 100%;
+  padding: 60px 0;
+  background: #f5f5f5;
+}
+
+.roller-contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  width: 90%;
+  margin: auto;
+}
+
+/* CARRUSEL AUTOMÁTICO IZQUIERDA */
+.roller-carrusel {
+  width: 50%;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+
+.carrusel-track {
+  display: flex;
+  width: 300%;
+  animation: slide 12s infinite linear;
+}
+
+.carrusel-track img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ANIMACIÓN DEL CARRUSEL */
+@keyframes slide {
+  0% { transform: translateX(0%); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  100% { transform: translateX(0%); }
+}
+
+/* TEXTO DERECHA */
+.roller-info {
+  width: 50%;
+}
+
+.titulo-delgado {
+  font-weight: 300;
+  color: #333;
+}
+
+.roller-info h3 {
+  color: #e86b1f; /* naranja como pediste */
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.roller-info ul {
+  list-style: none;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.roller-info ul li {
+  margin-bottom: 10px;
+  color: #555;
+  font-weight: 500;
+}
+
+.roller-carrusel {
+  width: 50%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #000;
+}
+
+.roller-carrusel img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* se ve COMPLETA */
+  transition: opacity 0.5s ease;
+}
+
+.carrusel-js {
+  width: 50%;
+  height: 350px;
+  overflow: hidden;   /* IMPORTANTE: oculta las demás imágenes */
+  border-radius: 12px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.carrusel-contenedor {
+  display: flex;
+  width: 100%;                 /* AHORA solo ocupa el ancho de UNA imagen */
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
+}
+
+.carrusel-img {
+  min-width: 100%;             /* cada imagen ocupa TODO el contenedor */
+  height: 100%;
+  object-fit: contain;         /* imagen completa sin recortar */
+}
+
+.carrusel-js {
+  width: 50%;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.carrusel-contenedor {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
+}
+
+.carrusel-img {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;   /* 🔥 LLENA COMPLETAMENTE EL ANCHO SIN MARCOS */
+}
+
+.carrusel-js {
+  width: 55%;              /* un poco más ancho si quieres */
+  height: 420px;           /* 🔥 contenedor más grande */
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+
+.carrusel-contenedor {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.carrusel-img {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 2.5s ease;   /* 🔥 zoom suave */
+}
+
+.carrusel-img.active {
+  transform: scale(1.05);   /* 🔥 efecto zoom */
+}
+
+.roller-contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Animación desde los lados */
+@keyframes entrarIzquierda {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes entrarDerecha {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Aplicar animación */
+.reco-texto {
+  animation: entrarIzquierda 1.2s ease-out forwards;
+}
+
+.reco-imagen {
+  animation: entrarDerecha 1.2s ease-out forwards;
+}
+
+/* Estado inicial: oculto */
+.aparecer {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1s ease-out;
+}
+
+/* Estado visible */
+.aparecer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .footer {
   font-size: 20px;
 }
@@ -1690,4 +2006,43 @@ body {
 
 .footer-item:nth-child(3) {
   transform: translateX(40px);
+}
+
+.reco-texto {
+  margin-left: 80px;
+}
+
+.servicios-section {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.servicios-titulo {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.servicios-contenedor {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.servicio-item {
+  width: 220px;
+}
+
+.servicio-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.servicio-item p {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 600;
 }

@@ -1847,3 +1847,18 @@ nav ul li a:hover {
 body {
   font-family: 'Lato', sans-serif;
 }
+.footer {
+  font-size: 20px;
+}
+
+.footer-item p {
+  font-size: 20px;
+}
+
+.footer-item:first-child {
+  margin-left: -230px;
+}
+
+.footer-item:nth-child(3) {
+  transform: translateX(40px);
+}
