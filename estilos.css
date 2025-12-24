@@ -1692,154 +1692,58 @@ body {
   transform: translateX(40px);
 }
 
-/* ==========================
-   RESPONSIVE PARA CELULARES
-   ========================== */
+/* =========================
+   HEADER - CELULAR
+========================= */
 @media (max-width: 768px) {
 
-  /* ===== HEADER ===== */
+  header {
+    width: 100%;
+  }
+
+  /* TOP BAR */
   .top-bar {
     flex-direction: column;
+    align-items: center;
     gap: 10px;
+    padding: 10px 0;
     text-align: center;
   }
 
+  .social {
+    justify-content: center;
+  }
+
+  .contacto {
+    justify-content: center;
+  }
+
+  /* MAIN BAR */
   .main-bar {
     flex-direction: column;
+    align-items: center;
     gap: 15px;
   }
 
+  /* LOGO */
+  .logo {
+    order: -1; /* sube el logo arriba */
+  }
+
+  .logo img {
+    max-width: 180px;
+    height: auto;
+  }
+
+  /* MENÚS */
   nav ul {
     flex-direction: column;
     align-items: center;
     gap: 10px;
   }
 
-  .logo img {
-    width: 140px;
-  }
-
-  /* ===== CARRUSEL PRINCIPAL ===== */
-  .carrusel {
-    height: auto;
-  }
-
-  .slide img {
-    height: 300px;
-    object-fit: cover;
-  }
-
-  .texto-slide {
-    position: absolute;
-    bottom: 20px;
-    left: 15px;
-    right: 15px;
-    text-align: left;
-  }
-
-  .texto-slide h2 {
-    font-size: 22px;
-  }
-
-  .texto-slide p {
-    font-size: 14px;
-    line-height: 1.3;
-  }
-
-  /* ===== CARRUSEL DE CARTAS ===== */
-  .contenedor-cartas {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .carta img {
-    height: 220px;
-  }
-
-  /* ===== PLANES ===== */
-  .planes-contenedor {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .lado-izquierdo,
-  .lado-derecho {
-    width: 100%;
-  }
-
-  .carta-grande img {
-    width: 100%;
-  }
-
-  /* ===== SECCIÓN DOS MITADES ===== */
-  .fondo-dos-mitades {
-    flex-direction: column;
-  }
-
-  .mitad {
-    width: 100%;
-    height: 300px;
-  }
-
-  .contenido-texto {
-    text-align: center;
-    padding: 20px;
-  }
-
-  /* ===== CONTACTO ===== */
-  .contacto-contenedor {
-    flex-direction: column;
-  }
-
-  .lado-derecho img {
-    height: 300px;
-    object-fit: cover;
-  }
-
-  /* ===== FOOTER ===== */
-  .footer-contenedor {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
-
-  /* ===== WHATSAPP ===== */
-  .whatsapp-float {
-    width: 55px;
-    height: 55px;
-    bottom: 15px;
-    right: 15px;
-  }
-}
-
-/* ====== SOLO CELULAR ====== */
-@media (max-width: 768px) {
-
-  body {
-    overflow-x: hidden;
-  }
-
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .reco-contenido {
-    flex-direction: column;
-  }
-
-  .reco-texto {
-    text-align: center;
-    padding: 20px;
-  }
-
-  .reco-imagen img {
-    width: 100%;
-    height: auto;
+  nav ul li a {
+    font-size: 16px;
+    padding: 8px 0;
   }
 }
